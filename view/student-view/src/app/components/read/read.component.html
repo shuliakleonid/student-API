@@ -1,0 +1,11 @@
+<div>
+  <p>Students</p>
+
+  <ng-container *ngIf="{students: students$ | async} as $">
+    <div *ngFor="let student of $.students" class="list">
+      <div>name: {{student.name}}</div>
+      <div>school: {{student.school}}</div>
+    </div>
+  </ng-container>
+
+</div>

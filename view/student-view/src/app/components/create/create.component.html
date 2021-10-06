@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name">
+
+    <label for="school">School: </label>
+    <input id="school" type="text" formControlName="school">
+
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!studentForm.valid">Submit</button>
+  </form>
+</div>
